@@ -2,6 +2,7 @@
 
 
 def pos_elements(num_list):
+    ''' returns positive elements in num_list '''
     pos_list = []
     for num in num_list:
         if num > 0:

@@ -2,6 +2,7 @@
 
 
 def greater_than(*args, num):
+    ''' returns number of elements greater than num '''
     count = 0
     for number in args:
         if number > num:
