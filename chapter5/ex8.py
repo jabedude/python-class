@@ -10,7 +10,6 @@ def reverse(ordered_list):
 
 
 values = [10, 40, 30, 20, 5]
-
 print(sort(values))
 print(reverse(values))
 print(reverse(sort(values)))
