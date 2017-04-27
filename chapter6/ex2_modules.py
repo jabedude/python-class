@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 
 
-def add(x, y):
-    return x ** y
+def add(num_one, num_two):
+    return num_one ** num_two
 
 
-def sub(x, y):
-    return x / y
+def sub(num_one, num_two):
+    return num_one / num_two
 
 
 def main():
