@@ -40,8 +40,9 @@ def main():
         if user_number.isdigit() and user_number != "0":
             user_number = int(user_number)
         else:
-            print("Usage: {} <number of bottles (must be more than 0)>".format(sys.argv[0]))
-            exit()
+            print("Usage: {} <number of bottles> "
+                  "Number must be greater than 0.".format(sys.argv[0]))
+            exit(1)
     else:
         user_number = 99
 
