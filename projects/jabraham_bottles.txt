@@ -31,9 +31,7 @@ Potential Pitfalls:
 
 Test Plan:
         User Test:
-                <Describe the steps taken for each user test.>
         Test Cases:
-                <A brief overview of the test cases that you implemented.>
                 python3 jabraham_bottles.py 2
                 - Test passing user input of 2 to check if program correctly starts at the second-to-last verse
                 python3 jabraham_bottles.py 1
