@@ -1,0 +1,35 @@
+Name:
+Date:
+Current Module:
+Project Name:
+
+Project Goals:
+	<A two to three sentence description of the project and its intent>
+
+Considerations:
+	<A bulleted list of considerations and conditions which affected the design of your project>
+
+Initial Design:
+	<A paragraph or more that adequately describes your program's structure and layout discussing the various modules (.c and corresponding .h files) that you implemented>
+
+Data Flow:
+	<A paragraph or longer describing the data flow of the program in a sequential manner.  Include a diagram when necessary.>
+
+Communication Protocol:
+	<Discuss any custom communication protocol you have used including the various request and responses that may be sent and received.>
+
+Potential Pitfalls:
+	<Discuss any potential issues that you might run into while creating the project>
+
+Test Plan:
+	User Test:
+ 		<Describe the steps taken for each user test.>
+	Test Cases:
+		<A brief overview of the test cases that you implemented.>
+
+Conclusion:
+	<A review of the project, what worked, what didn’t and how to improve upon your project in the future.>
+
+
+
+
