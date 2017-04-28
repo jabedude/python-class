@@ -36,8 +36,8 @@ Test Plan:
                 - Test passing user input of 2 to check if program correctly starts at the second-to-last verse
                 python3 jabraham_bottles.py 1
                 - Test passing user input of 1 to check if program correctly starts at the last verse
-                python3 jabraham_bottles.py 99
-                - Test passing user input of 99 to check if program correctly starts at 99, and prints all expected verses
+                python3 jabraham_bottles.py 100
+                - Test passing user input of 100 to check if program correctly starts at 100, and prints all expected verses
                 python3 jabraham_bottles.py -99
                 - Test passing user input of -99 to check if program displays usage statement and exits
                 python3 jabraham_bottles.py 0
