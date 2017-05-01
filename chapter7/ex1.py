@@ -12,20 +12,47 @@ class Person:
         self.age = age
         self.gender = gender
 
-    def __get__(self):
-        pass
 
-    def __set__(self):
-        pass
+    @property
+    def name(self):
+        return self._name
+
+
+    @name.setter
+    def name(self, name):
+        self._name = name
+
+
+    @property
+    def age(self):
+        return self._age
+
+
+    @age.setter
+    def age(self, age):
+        self._age = age
+
+
+    @property
+    def gender(self):
+        return self._gender
+
+
+    @gender.setter
+    def gender(self, gender):
+        self._gender = gender
+
 
     def __str__(self):
-        pass
+        return "{} {} {}".format(self.name, self.age, self.gender)
 
 
 def main():
     ''' Function tests Person object '''
 
-    test_person = Person()
+    test_person = Person("Michael", 45, "M")
+    print(test_person)
+
 
 if __name__ == "__main__":
     main()
