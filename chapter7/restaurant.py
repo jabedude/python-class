@@ -42,7 +42,7 @@ class MenuItem(Category):
         self._price = price
 
     def __str__(self):
-        return "Name: {}\n Description: {}\n Price: ${}".format(self.name, self.desc, self.price)
+        return "Name: {}\nDescription: {}\nPrice: ${}".format(self.name, self.desc, self.price)
 
 
 class Restaurant():
@@ -57,5 +57,12 @@ class Restaurant():
     def menu_items(self, menu_items):
         self._menu_items = menu_items
 
+    def add(self, item):
+        self.menu_items.append(item)
+
     def __str__(self):
-        return "\n".join(self.menu_items)
+        results = []
+        for num, item in enumerate(self.menu_items):
+            results.append("Item {}\n{}\n".format(num + 1, item))
+
+        return "\n".join(results)
