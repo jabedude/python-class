@@ -2,7 +2,7 @@
 
 
 class Category():
-    
+    ''' Class represents Category objects. Only has a name '''
     def __init__(self, name):
         self.name = name
 
@@ -19,7 +19,7 @@ class Category():
 
 
 class MenuItem(Category):
-    
+    ''' Class represents a MenuItem object. Has a name, description, and price. '''
     def __init__(self, name, desc, price):
         super().__init__(name)
         self.desc = desc
@@ -46,6 +46,10 @@ class MenuItem(Category):
 
 
 class Restaurant():
+    '''
+    Class represents a Restaurant object, a list of MenuItems. Has add() method
+    to add MenuItems to list.
+    '''
     def __init__(self, *menu_items):
         self.menu_items = list(menu_items)
 
@@ -58,6 +62,7 @@ class Restaurant():
         self._menu_items = menu_items
 
     def add(self, item):
+        ''' Method adds MenuItem to Restaurant obj '''
         self.menu_items.append(item)
 
     def __str__(self):

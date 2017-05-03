@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 ''' Code for exercise 1 chapter 9 '''
 
+
 def main():
     ''' Docstring '''
     line_count = 0

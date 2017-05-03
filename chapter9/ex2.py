@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
-''' Code for exercise 1 chapter 9 '''
+''' Code for exercise 2 chapter 9 '''
 import sys
+
 
 def main():
     ''' Docstring '''
