@@ -1,7 +1,7 @@
-Name:
-Date:
-Current Module:
-Project Name:
+Name: Joshua Abraham
+Date: 4 MAY 2017
+Current Module: Python Programming
+Project Name: High-Low Guessing Game
 
 Project Goals:
 	<A two to three sentence description of the project and its intent>
@@ -20,10 +20,12 @@ Communication Protocol:
 
 Potential Pitfalls:
 	<Discuss any potential issues that you might run into while creating the project>
+        - Handling incorrect user input, including non-integers, spaces, etc.
 
 Test Plan:
 	User Test:
  		<Describe the steps taken for each user test.>
+                
 	Test Cases:
 		<A brief overview of the test cases that you implemented.>
 
