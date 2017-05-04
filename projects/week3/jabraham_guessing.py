@@ -1,19 +1,28 @@
 #!/usr/bin/env python3
-''' Docstring '''
+'''
+This program is an implementation of the "High-Low Guessing Game".
+The user is prompted to guess a number from 1 to 100 and the
+program will tell the user if the number is greater or lesser than
+the correct number.
+'''
 from random import randint
 
 
 ANSWER = randint(1, 100)
 BANNER = '''Hello. I'm thinking of a number from 1 to 100...
 Try to guess my number!'''
-PROMPT   = "Guess> "
-err_msg  = "{} is an invalid choice. Please enter a number from 1 to 100."
-suc_msg  = "{} was correct! You guessed the number in {} guess{}"
+PROMPT = "Guess> "
+err_msg = "{} is an invalid choice. Please enter a number from 1 to 100."
+suc_msg = "{} was correct! You guessed the number in {} guess{}"
 high_msg = "{} is too high!"
-low_msg  = "{} is too low!"
+low_msg = "{} is too low!"
 
 
 def main():
+    '''
+    This function is the entry point of the program and handles user
+    interaction with the game.
+    '''
 
     print(BANNER)
     print(ANSWER)
