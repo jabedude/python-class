@@ -5,6 +5,7 @@ Project Name: High-Low Guessing Game
 
 Project Goals:
 	<A two to three sentence description of the project and its intent>
+        The goal of this project is to 
 
 Considerations:
 	<A bulleted list of considerations and conditions which affected the design of your project>
@@ -21,6 +22,7 @@ Communication Protocol:
 Potential Pitfalls:
 	<Discuss any potential issues that you might run into while creating the project>
         - Handling incorrect user input, including non-integers, spaces, etc.
+        - Correct usage of if-else statements with regards to default cases.
 
 Test Plan:
 	User Test:
