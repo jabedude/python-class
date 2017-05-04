@@ -4,11 +4,10 @@
 def build_dict(text_list):
     ''' Docstring '''
     master_dict = dict()
-    comp_dict = {"Desktop" : 0, "Laptop" : 0, "Tablet" : 0}
     name_list = [x.split()[0] for x in text_list]
     for name in name_list:
         if name not in master_dict:
-            master_dict[name] = comp_dict
+            master_dict[name] = {"Desktop" : 0, "Laptop" : 0, "Tablet" : 0}
     return master_dict
 
 
@@ -17,7 +16,7 @@ def parse_line(line, master_dict):
     val_list = line.split()
     master_dict[val_list[0]][val_list[1]] += int(val_list[2])
     # print(master_dict[val_list[0]])
-    print(master_dict)
+    #print(master_dict)
 
 
 def main():
@@ -26,12 +25,9 @@ def main():
         comp_lines = comp_file.readlines()
 
     master_dict = build_dict(comp_lines)
-    '''
     for line in comp_lines:
         parse_line(line, master_dict)
-    '''
-    parse_line(comp_lines[0], master_dict)
-    # print(master_dict)
+    print(master_dict)
 
 if __name__ == "__main__":
     main()
