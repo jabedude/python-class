@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 ''' Code for exercise 2 chapter 8 '''
 
+
 def main():
     ''' Docstring '''
 

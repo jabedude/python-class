@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 ''' Code for exercise 6 chapter 9 '''
-import sys, os
+import sys
+import os
 
 
 def main():

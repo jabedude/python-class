@@ -9,7 +9,7 @@ def main():
     in_two = sys.argv[2]
     set_one = set()
     set_two = set()
-    
+
     with open(in_one, "r") as file_one, open(in_two, "r") as file_two:
         while True:
             line_one = file_one.readline()

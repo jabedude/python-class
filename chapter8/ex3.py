@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 ''' Code for exercise 3 chapter 8 '''
 
+
 def main():
     ''' Docstring '''
 
@@ -19,7 +20,7 @@ def main():
             print(error)
         except EOFError:
             break
-    
+
     print("\nThe total is {}".format(total))
 
 if __name__ == "__main__":
