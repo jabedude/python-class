@@ -17,6 +17,7 @@ def parse_line(line, master_dict):
     val_list = line.split()
     master_dict[val_list[0]][val_list[1]] += int(val_list[2])
     # print(master_dict[val_list[0]])
+    print(master_dict)
 
 
 def main():
@@ -25,9 +26,12 @@ def main():
         comp_lines = comp_file.readlines()
 
     master_dict = build_dict(comp_lines)
+    '''
     for line in comp_lines:
         parse_line(line, master_dict)
-    print(master_dict)
+    '''
+    parse_line(comp_lines[0], master_dict)
+    # print(master_dict)
 
 if __name__ == "__main__":
     main()
