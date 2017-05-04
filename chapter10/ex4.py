@@ -12,10 +12,11 @@ def build_dict(text_list):
     return master_dict
 
 
-def parse_line(line):
+def parse_line(line, master_dict):
     ''' Doctring '''
-    line = line.strip()
-    line_list = line.split()
+    val_list = line.split()
+    master_dict[val_list[0]][val_list[1]] += int(val_list[2])
+    # print(master_dict[val_list[0]])
 
 
 def main():
@@ -23,8 +24,10 @@ def main():
     with open("computers.txt", "r") as comp_file:
         comp_lines = comp_file.readlines()
 
-    print(build_dict(comp_lines))
-
+    master_dict = build_dict(comp_lines)
+    for line in comp_lines:
+        parse_line(line, master_dict)
+    print(master_dict)
 
 if __name__ == "__main__":
     main()
