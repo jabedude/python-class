@@ -8,14 +8,15 @@ the correct number.
 from random import randint
 
 
+# CONSTANTS #
 ANSWER = randint(1, 100)
 BANNER = '''Hello. I'm thinking of a number from 1 to 100...
 Try to guess my number!'''
 PROMPT = "Guess> "
+# MESSAGES #
 err_msg = "{} is an invalid choice. Please enter a number from 1 to 100."
-suc_msg = "{} was correct! You guessed the number in {} guess{}"
-high_msg = "{} is too high!"
-low_msg = "{} is too low!"
+suc_msg = "{} was correct! You guessed the number in {} guess{}."
+wrong_msg = "{} is too {}!"
 
 
 def main():
@@ -46,10 +47,10 @@ def main():
                 break
 
             elif user_input > ANSWER:
-                print(high_msg.format(user_input))
+                print(wrong_msg.format(user_input, "high"))
 
             else:
-                print(low_msg.format(user_input))
+                print(wrong_msg.format(user_input, "low"))
 
         except ValueError:
             print(err_msg.format(user_input))
