@@ -4,36 +4,54 @@ Current Module: Python Programming
 Project Name: High-Low Guessing Game
 
 Project Goals:
-	<A two to three sentence description of the project and its intent>
-        The goal of this project is to 
+        <A two to three sentence description of the project and its intent>
+        The goal of this project is to create a game where the user must guess a randomly generated number between 1 and 100.
+        The program should handle non-integer inputs and advise the user when a guess is too low or high.
 
 Considerations:
-	<A bulleted list of considerations and conditions which affected the design of your project>
+        <A bulleted list of considerations and conditions which affected the design of your project>
+        - Ensure that the game handles and rejects guesses greater than 100 and less than 1
+        - Use descriptive variable names
+        - Ensure program only counts valid user guesses and prints that number at the end of the game
+        - Print the random integer during testing and development to speed up development process and ensure accuracy of tests.
+        - Ensure code complies with PEP8 and instructor code style guidlines
 
 Initial Design:
-	<A paragraph or more that adequately describes your program's structure and layout discussing the various modules (.c and corresponding .h files) that you implemented>
+        <A paragraph or more that adequately describes your program's structure and layout discussing the various modules (.c and corresponding .h files) that you implemented>
+        The program is one .py file with a single function: main(). main() is the entry point of the program and handles all logic, exception handling, and user interaction.
 
 Data Flow:
-	<A paragraph or longer describing the data flow of the program in a sequential manner.  Include a diagram when necessary.>
+        <A paragraph or longer describing the data flow of the program in a sequential manner.  Include a diagram when necessary.>
+        Beginning in main(), the program generates a random number between 1 and 100, prints a banner, and asks the user for a guess. The number of valid guesses is incremented by one and the program enters a try..except block. It attempts to convert the input to an int, and tests if the number is between 1 and 100. If either/or of these fails a ValueError exception is raised, an error message is displayed to the user advising them that their guess is invalid, and the number of valid guesses is decremented by one.
+        main() checks if the user's number is equal to, greater than, or less than the random integer. Depending on the comparison the program tells the user that their guess is correct, too high, or too low respectivly. If the user guessed correctly, then the number of valid guesses is displayed.
 
 Communication Protocol:
-	<Discuss any custom communication protocol you have used including the various request and responses that may be sent and received.>
+        N/A.
 
 Potential Pitfalls:
-	<Discuss any potential issues that you might run into while creating the project>
+        <Discuss any potential issues that you might run into while creating the project>
         - Handling incorrect user input, including non-integers, spaces, etc.
         - Correct usage of if-else statements with regards to default cases.
+        - Avoid repeatedly incrementing the number of valid guesses in the if..elif..else block.
 
 Test Plan:
-	User Test:
- 		<Describe the steps taken for each user test.>
+        User Test:
+                <Describe the steps taken for each user test.>
+                - Guess number in one guess:
+                        output should be success message with singular '1 guess' displayed.
+                - Guess number in five valid guesses:
+                        output should be success message with plural '5 guesses' displayed.
+                - Give non-integer input:
+                        output should be error message with user input displayed.
+                - Give input greater than 100 and less than 1:
+                        output should be error message with user input displayed.
+                - Give mixed valid, invalid, and correct guess:
+                        output should be success message with only number of valid guesses displayed.
                 
-	Test Cases:
-		<A brief overview of the test cases that you implemented.>
+        Test Cases:
+                N/A.
 
 Conclusion:
-	<A review of the project, what worked, what didn’t and how to improve upon your project in the future.>
-
-
-
-
+        <A review of the project, what worked, what didn’t and how to improve upon your project in the future.>
+        The project successfully met all goals and followed all considerations. The program only increments and decrements the number of valid guesses once each, and in logical places. The program uses exceptions to handle non integer and invalid (less than 1; greater than 100) input. The code complies with PEP8 and uses descriptive variable names.
+        Future improvements might include coloring the error, success, and wrong guess messages for a better user experience. I would also like to handle ctrl-c/ctrl-d interrupts.

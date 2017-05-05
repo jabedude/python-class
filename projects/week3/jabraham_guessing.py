@@ -8,30 +8,28 @@ the correct number.
 from random import randint
 
 
-# CONSTANTS #
-ANSWER = randint(1, 100)
-BANNER = '''Hello. I'm thinking of a number from 1 to 100...
-Try to guess my number!'''
-PROMPT = "Guess> "
-# MESSAGES #
-err_msg = "{} is an invalid choice. Please enter a number from 1 to 100."
-suc_msg = "{} was correct! You guessed the number in {} guess{}."
-wrong_msg = "{} is too {}!"
-
-
 def main():
     '''
     This function is the entry point of the program and handles user
     interaction with the game.
     '''
+    # CONSTANTS #
+    ANSWER = randint(1, 100)
+    BANNER = '''Hello. I'm thinking of a number from 1 to 100...
+Try to guess my number!'''
+    PROMPT = "Guess> "
+    # MESSAGES #
+    err_msg = "{} is an invalid choice. Please enter a number from 1 to 100."
+    suc_msg = "{} was correct! You guessed the number in {} guess{}."
+    wrong_msg = "{} is too {}!"
 
     print(BANNER)
     print(ANSWER)
-    guesses_num = 0
+    valid_guesses = 0
 
     while True:
         user_input = input(PROMPT)
-        guesses_num += 1
+        valid_guesses += 1
 
         try:
             user_input = int(user_input)
@@ -40,11 +38,11 @@ def main():
                 raise ValueError
 
             elif user_input == ANSWER:
-                if guesses_num == 1:
-                    print(suc_msg.format(user_input, guesses_num, ""))
+                if valid_guesses == 1:
+                    print(suc_msg.format(user_input, valid_guesses, ""))
                 else:
-                    print(suc_msg.format(user_input, guesses_num, "es"))
-                break
+                    print(suc_msg.format(user_input, valid_guesses, "es"))
+                exit(0)
 
             elif user_input > ANSWER:
                 print(wrong_msg.format(user_input, "high"))
@@ -53,6 +51,7 @@ def main():
                 print(wrong_msg.format(user_input, "low"))
 
         except ValueError:
+            valid_guesses -= 1
             print(err_msg.format(user_input))
 
 
