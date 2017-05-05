@@ -24,6 +24,7 @@ Try to guess my number!'''
     wrong_msg = "{} is too {}!"
 
     print(BANNER)
+    print(ANSWER)
     valid_guesses = 0
 
     while True:
@@ -37,11 +38,12 @@ Try to guess my number!'''
 
             elif user_input == ANSWER:
                 if valid_guesses == 1:
-                    print(suc_msg.format(user_input, valid_guesses, ""))
+                    guess_ending = ""
 
                 else:
-                    print(suc_msg.format(user_input, valid_guesses, "es"))
+                    guess_ending = "es"
 
+                print(suc_msg.format(user_input, valid_guesses, guess_ending))
                 exit(0)
 
             elif user_input > ANSWER:
