@@ -44,11 +44,12 @@ Try to guess my number!'''
                 print(suc_msg.format(user_input, valid_guesses, guess_ending))
                 exit(0)
 
-            elif user_input > ANSWER:
-                print(wrong_msg.format(user_input, "high"))
-
             else:
-                print(wrong_msg.format(user_input, "low"))
+                guess_clue = "high"
+                if user_input < ANSWER:
+                    guess_clue = "low"
+
+                print(wrong_msg.format(user_input, guess_clue))
 
         except ValueError:
             valid_guesses -= 1
