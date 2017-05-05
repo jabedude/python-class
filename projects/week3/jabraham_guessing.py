@@ -24,6 +24,7 @@ Try to guess my number!'''
     wrong_msg = "{} is too {}!"
 
     print(BANNER)
+    print(ANSWER)
     valid_guesses = 0
 
     while True:
@@ -36,11 +37,9 @@ Try to guess my number!'''
                 raise ValueError
 
             elif user_input == ANSWER:
+                guess_ending = "es"
                 if valid_guesses == 1:
                     guess_ending = ""
-
-                else:
-                    guess_ending = "es"
 
                 print(suc_msg.format(user_input, valid_guesses, guess_ending))
                 exit(0)
