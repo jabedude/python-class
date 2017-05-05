@@ -24,7 +24,6 @@ Try to guess my number!'''
     wrong_msg = "{} is too {}!"
 
     print(BANNER)
-    print(ANSWER)
     valid_guesses = 0
 
     while True:
