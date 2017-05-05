@@ -2,8 +2,8 @@
 '''
 This program is an implementation of the "High-Low Guessing Game".
 The user is prompted to guess a number from 1 to 100 and the
-program will tell the user if the number is greater or lesser than
-the correct number.
+program will tell the user if the number is greater, lesser, or
+equal to the correct number.
 '''
 from random import randint
 
