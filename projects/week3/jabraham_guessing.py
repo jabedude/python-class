@@ -32,15 +32,16 @@ Try to guess my number!'''
 
         try:
             user_input = int(user_input)
-
             if user_input not in range(1, 101):
                 raise ValueError
 
             elif user_input == ANSWER:
                 if valid_guesses == 1:
                     print(suc_msg.format(user_input, valid_guesses, ""))
+
                 else:
                     print(suc_msg.format(user_input, valid_guesses, "es"))
+
                 exit(0)
 
             elif user_input > ANSWER:
