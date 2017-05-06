@@ -1,4 +1,4 @@
-﻿Name: Joshua Abraham
+Name: Joshua Abraham
 Date: 4 MAY 2017
 Current Module: Python Programming
 Project Name: High-Low Guessing Game
@@ -12,8 +12,8 @@ Project Goals:
 Considerations:
         - Ensure that the game handles and rejects guesses greater than 100 and less than 1
         - Use descriptive variable names
-        - Ensure program only counts valid user guesses and prints that number at the end of the game
-        - Print the random integer during testing and development to speed up development process and ensure accuracy of tests.
+        - Ensure that the program only counts valid user guesses and prints that number at the end of the game
+        - Print the random integer during testing and development to speed up the development process and ensure accuracy of tests.
         - Ensure code complies with PEP8 and instructor code style guidelines
 
 
@@ -22,8 +22,8 @@ Initial Design:
 
 
 Data Flow:
-        Beginning in main(), the program generates a random number between 1 and 100, prints a banner, and asks the user for a guess. The number of valid guesses is incremented by one and the program enters a try..except block. It attempts to convert the input to an int, and tests if the number is between 1 and 100. If either fails a ValueError exception is raised, an error message is displayed to the user advising them that their guess is invalid, and the number of valid guesses is decremented by one.
-        main() checks if the user's number is equal to, greater than, or less than the random integer. Depending on the comparison the program tells the user that their guess is correct, too high, or too low respectively. If the user guessed correctly, then the number of valid guesses is displayed and the program exits.
+        Beginning in main(), the program generates a random number between 1 and 100, prints a banner, and asks the user for a guess. The number of valid guesses is incremented by one and the program enters a try..except block. The program attempts to convert the input to an int, and tests if the number is between 1 and 100. If either fails a ValueError exception is raised, an error message is displayed to the user advising them that their guess is invalid, and the number of valid guesses is decremented by one.
+        main() checks if the user's number is equal to, greater than, or less than the random integer. Depending on the comparison, the program tells the user that their guess is correct, too high, or too low, respectively. If the user guessed correctly, then the number of valid guesses is displayed and the program exits.
 
 
 Communication Protocol:
@@ -54,5 +54,5 @@ Test Plan:
 
 
 Conclusion:
-        The project successfully met all goals and followed all considerations. The program only increments and decrements the number of valid guesses once each, and in logical places. The program uses exceptions to handle non integer and invalid (less than 1; greater than 100) input. The code complies with PEP8 and uses descriptive variable names.
+        The project successfully met all goals and followed all considerations. The program only increments and decrements the number of valid guesses once each, and in logical places. The program uses exceptions to handle non-integer and invalid (less than 1; greater than 100) input. The code complies with PEP8 and uses descriptive variable names.
         Future improvements might include coloring the error, success, and wrong guess messages for a better user experience. I would also like to handle ctrl-c/ctrl-d interrupts.
